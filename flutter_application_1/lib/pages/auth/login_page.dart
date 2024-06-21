@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/const.dart';
+import 'package:flutter_application_1/pages/auth/signup_page.dart';
 import 'package:flutter_application_1/util/input_field.dart';
 
 class LoginPage extends StatelessWidget {
@@ -58,7 +59,10 @@ class LoginPage extends StatelessWidget {
                 )
               ),
               child: InkWell(
-                onTap: () => authController.loginUser(_emailController.text, _passwordController.text),
+                onTap: () => authController.loginUser(
+                  _emailController.text, 
+                  _passwordController.text
+                ),
                 child: const Center(
                   child: Text('Login', style: TextStyle(
                     fontSize: 20, 
@@ -79,9 +83,8 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 InkWell(
-                  onTap: (){
-                    print('Nav');
-                  },
+                  onTap: () => Navigator.of(context).push(MaterialPageRoute
+                  (builder: (context) => SignUpPage())),
                   child: Text('Register',
                   style: TextStyle(
                     fontSize: 20,

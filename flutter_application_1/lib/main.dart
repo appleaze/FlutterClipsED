@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: SignUpPage(),
       //theme: ThemeData(brightness: Brightness.dark),
     );
   }
