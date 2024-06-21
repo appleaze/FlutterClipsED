@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_application_1/pages/auth/login_page.dart';
+import 'package:flutter_application_1/pages/auth/signup_page.dart';
 import 'homepage.dart';
 
 void main() {
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
-      theme: ThemeData(brightness: Brightness.dark),
+      //theme: ThemeData(brightness: Brightness.dark),
     );
   }
 }
