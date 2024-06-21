@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/const.dart';
+import 'package:flutter_application_1/controllers/auth_controller.dart';
 import 'package:flutter_application_1/util/input_field.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -67,9 +68,7 @@ class SignUpPage extends StatelessWidget {
                 )
               ),
               child: InkWell(
-                onTap: () {
-                  print("Text");
-                },
+                onTap: () => authController.registerUser(_usernameController.text, _emailController.text, _passwordController.text),
                 child: const Center(
                   child: Text('Sign Up', style: TextStyle(
                     fontSize: 20, 

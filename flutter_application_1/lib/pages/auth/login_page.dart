@@ -18,7 +18,7 @@ class LoginPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Login Up',
+              'Login',
               style: TextStyle(
                 fontSize: 42,
                 fontWeight: FontWeight.w700,
@@ -58,9 +58,7 @@ class LoginPage extends StatelessWidget {
                 )
               ),
               child: InkWell(
-                onTap: () {
-                  print("Text");
-                },
+                onTap: () => authController.loginUser(_emailController.text, _passwordController.text),
                 child: const Center(
                   child: Text('Login', style: TextStyle(
                     fontSize: 20, 

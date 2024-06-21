@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "82692466201",
+    "project_id": "clipsed-c909f",
+    "storage_bucket": "clipsed-c909f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82692466201:android:fd56d765b4b1a51e4fec88",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGEvUxZQ0K7LKflODkVcmKRgf9PT-XTzI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
