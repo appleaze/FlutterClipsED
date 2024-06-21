@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/const.dart';
-import 'package:flutter_application_1/controllers/auth_controller.dart';
 import 'package:flutter_application_1/util/input_field.dart';
 
 class SignUpPage extends StatelessWidget {

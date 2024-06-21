@@ -14,12 +14,12 @@ class MyButton extends StatelessWidget {
         children: [
           Icon(icon,
           size: 30,
+          color: Colors.white,
           ),
           SizedBox(
             height: 10,
             ),
-          Text(number),
-      
+          Text(number, style: TextStyle(color: Colors.white),),
         ],
       ),
     );

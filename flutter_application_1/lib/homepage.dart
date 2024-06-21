@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter_application_1/const.dart';
 import 'package:flutter_application_1/pages/clips.dart';
 import 'package:flutter_application_1/pages/discover.dart';
 import 'package:flutter_application_1/pages/following.dart';
@@ -36,10 +38,12 @@ class _MyWidgetState extends State<HomePage> {
         currentIndex: _selectedIndex,
         onTap: _navigateBottomBar,
         type: BottomNavigationBarType.fixed,
+        selectedItemColor: buttonColor,
+        unselectedItemColor: textColor,
         items: [
         BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
         BottomNavigationBarItem(icon: Icon(Icons.play_arrow), label: 'Clips'),
-        BottomNavigationBarItem(icon: Icon(Icons.compass_calibration_sharp), label: 'Discover'),
+        BottomNavigationBarItem(icon: Icon(CupertinoIcons.compass_fill), label: 'Discover'),
         BottomNavigationBarItem(icon: Icon(Icons.notifications), label: 'Following'),
         BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
       ],),

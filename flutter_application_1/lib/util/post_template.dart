@@ -37,6 +37,7 @@ class PostTemplate extends StatelessWidget {
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 16,
+                        color: Colors.white,
                       )),
                   SizedBox(
                     height: 10,
@@ -44,9 +45,10 @@ class PostTemplate extends StatelessWidget {
                   Text.rich(
                     TextSpan(
                       children: [
-                        TextSpan(text: videoDescription),
+                        TextSpan(text: videoDescription,
+                        style: TextStyle(color: Colors.white)),
                         TextSpan(text: '#Project #SE',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
+                        style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white,)),
                         ],
                         ),
                       )
