@@ -4,9 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_application_1/controllers/auth_controller.dart';
 import 'package:flutter_application_1/pages/auth/login_page.dart';
-import 'package:flutter_application_1/pages/auth/signup_page.dart';
 import 'package:get/get.dart';
-import 'homepage.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignUpPage(),
+      home: LoginPage(),
       //theme: ThemeData(brightness: Brightness.dark),
     );
   }
