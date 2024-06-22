@@ -1,16 +1,19 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/controllers/upload_video_controller.dart';
 import 'package:flutter_application_1/util/input_field.dart';
+import 'package:get/get.dart';
 import 'package:video_player/video_player.dart';
 
 class ClipsDescPage extends StatefulWidget {
   final File videoFile;
   final String videoPath;
   const ClipsDescPage({
+    Key ? key,
     required this.videoFile,
     required this.videoPath,
-  });
+  }): super(key: key);
 
   @override
   State<ClipsDescPage> createState() => _ClipsDescPageState();
@@ -18,8 +21,10 @@ class ClipsDescPage extends StatefulWidget {
 
 class _ClipsDescPageState extends State<ClipsDescPage> {
   late VideoPlayerController controller;
-  TextEditingController songController = TextEditingController();
-  TextEditingController captionController = TextEditingController();
+  TextEditingController _songController = TextEditingController();
+  TextEditingController _captionController = TextEditingController();
+
+  UploadVideoController uploadVideoController = Get.put(UploadVideoController());
   @override
   void initState(){
     super.initState();
@@ -31,6 +36,13 @@ class _ClipsDescPageState extends State<ClipsDescPage> {
     controller.setVolume(1);
     controller.setLooping(true);
   }
+  @override
+  void dispose() {
+    super.dispose();
+    controller.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
@@ -54,7 +66,7 @@ class _ClipsDescPageState extends State<ClipsDescPage> {
                     margin: const EdgeInsets.symmetric(horizontal: 10),
                     width: MediaQuery.of(context).size.width -20,
                     child: TextInputField(
-                      controler: songController,
+                      controler: _songController,
                       labelText: 'Song Name',
                       icon: Icons.music_note,
                       ),
@@ -64,13 +76,17 @@ class _ClipsDescPageState extends State<ClipsDescPage> {
                     margin: const EdgeInsets.symmetric(horizontal: 10),
                     width: MediaQuery.of(context).size.width -20,
                     child: TextInputField(
-                      controler: captionController,
+                      controler: _captionController,
                       labelText: 'Caption',
                       icon: Icons.closed_caption,
                       ),
                   ),
                   const SizedBox(height: 10,),
-                  ElevatedButton(onPressed: (){}, 
+                  ElevatedButton(onPressed: () => uploadVideoController.uploadVideo(
+                    _songController.text, 
+                    _captionController.text, 
+                    widget.videoPath,
+                  ), 
                   child: const Text('Share!',
                   style: TextStyle(
                     fontSize: 20, 
