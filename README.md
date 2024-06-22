@@ -1,4 +1,4 @@
-![Screenshot_1719075319](https://github.com/appleaze/FlutterClipsED/assets/151055240/1d54ebe4-8e37-4782-8e6d-5164117ccb80)[Group 6](https://github.com/appleaze/FlutterClipsED/assets/151055240/fea27c74-b378-407b-9913-ec8274d55ea2)
+[Group 6](https://github.com/appleaze/FlutterClipsED/assets/151055240/fea27c74-b378-407b-9913-ec8274d55ea2)
 ClipEd - Aplikasi untuk micro learing
 Kelompok 8
 - 2602071291 - Theo Deannata Harjanto
