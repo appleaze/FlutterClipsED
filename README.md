@@ -1,5 +1,7 @@
-(https://github.com/appleaze/FlutterClipsED/assets/151055240/fea27c74-b378-407b-9913-ec8274d55ea2)
-ClipEd - Aplikasi untuk micro learing
+
+ClipEd - Aplikasi untuk micro learing!
+[Group 6](https://github.com/appleaze/FlutterClipsED/assets/151055240/bd16aa8f-417d-423c-a796-5e1231ce647f)
+
 Kelompok 8
 - 2602071291 - Theo Deannata Harjanto
 - 2602050860 - Joel Wilson Suwanto
